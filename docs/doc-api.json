@@ -1,0 +1,1072 @@
+{
+	"id": 0,
+	"name": "mx-lib",
+	"kind": 0,
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 1,
+			"name": "\"projects/mx-lib/src/lib/mx-grid/models/mx-grid.model\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/yuliiadubinina/Desktop/work/mx-lib/projects/mx-lib/src/lib/mx-grid/models/mx-grid.model.ts",
+			"children": [
+				{
+					"id": 2,
+					"name": "MXGridColumn",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 3,
+							"name": "field",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "projects/mx-lib/src/lib/mx-grid/models/mx-grid.model.ts",
+									"line": 2,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 7,
+							"name": "filterable",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "projects/mx-lib/src/lib/mx-grid/models/mx-grid.model.ts",
+									"line": 6,
+									"character": 14
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						},
+						{
+							"id": 4,
+							"name": "name",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "projects/mx-lib/src/lib/mx-grid/models/mx-grid.model.ts",
+									"line": 3,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							}
+						},
+						{
+							"id": 5,
+							"name": "resizable",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "projects/mx-lib/src/lib/mx-grid/models/mx-grid.model.ts",
+									"line": 4,
+									"character": 13
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						},
+						{
+							"id": 6,
+							"name": "width",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "projects/mx-lib/src/lib/mx-grid/models/mx-grid.model.ts",
+									"line": 5,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								3,
+								7,
+								4,
+								5,
+								6
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "projects/mx-lib/src/lib/mx-grid/models/mx-grid.model.ts",
+							"line": 1,
+							"character": 29
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						2
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "projects/mx-lib/src/lib/mx-grid/models/mx-grid.model.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 8,
+			"name": "\"projects/mx-lib/src/lib/mx-grid/mx-grid.component\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/yuliiadubinina/Desktop/work/mx-lib/projects/mx-lib/src/lib/mx-grid/mx-grid.component.ts",
+			"children": [
+				{
+					"id": 9,
+					"name": "MxGridComponent",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {
+						"isExported": true
+					},
+					"comment": {
+						"shortText": "Represents a grid component that leverages virtual scrolling.\nThis component provides a performant way to display large sets of data in a tabular format.",
+						"tags": [
+							{
+								"tag": "en",
+								"text": "{\"summary\": \"Component to display a table\"}"
+							},
+							{
+								"tag": "end",
+								"text": "\n"
+							}
+						]
+					},
+					"decorators": [
+						{
+							"name": "Component",
+							"type": {
+								"type": "reference",
+								"name": "Component"
+							},
+							"arguments": {
+								"obj": "{\n  selector: 'mx-grid',\n  templateUrl: './mx-grid.component.html',\n  styleUrls: ['./mx-grid.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n}"
+							}
+						},
+						{
+							"name": "UntilDestroy",
+							"type": {
+								"type": "reference",
+								"name": "UntilDestroy"
+							},
+							"arguments": {}
+						}
+					],
+					"children": [
+						{
+							"id": 16,
+							"name": "constructor",
+							"kind": 512,
+							"kindString": "Constructor",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 17,
+									"name": "new MxGridComponent",
+									"kind": 16384,
+									"kindString": "Constructor signature",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "reference",
+										"id": 9,
+										"name": "MxGridComponent"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "projects/mx-lib/src/lib/mx-grid/mx-grid.component.ts",
+									"line": 55,
+									"character": 29
+								}
+							]
+						},
+						{
+							"id": 13,
+							"name": "columns",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Configuration for columns of the grid, including width and the data field to be displayed.",
+								"tags": [
+									{
+										"tag": "en",
+										"text": "{\"summary\": \"Configuration for columns of the grid, including width and the data field to be displayed\", \"type\": \"MXGridColumn[]\"}"
+									},
+									{
+										"tag": "end",
+										"text": "\n"
+									}
+								]
+							},
+							"decorators": [
+								{
+									"name": "Input",
+									"type": {
+										"type": "reference",
+										"name": "Input"
+									},
+									"arguments": {}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "projects/mx-lib/src/lib/mx-grid/mx-grid.component.ts",
+									"line": 45,
+									"character": 18
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 2,
+									"name": "MXGridColumn"
+								}
+							},
+							"defaultValue": "[]"
+						},
+						{
+							"id": 12,
+							"name": "data",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "The dataset to be rendered in the grid.",
+								"tags": [
+									{
+										"tag": "remark",
+										"text": "Assumes that each item in the array corresponds to one row in the grid.\n"
+									}
+								]
+							},
+							"decorators": [
+								{
+									"name": "Input",
+									"type": {
+										"type": "reference",
+										"name": "Input"
+									},
+									"arguments": {}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "projects/mx-lib/src/lib/mx-grid/mx-grid.component.ts",
+									"line": 38,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "intrinsic",
+									"name": "any"
+								}
+							},
+							"defaultValue": "[]"
+						},
+						{
+							"id": 15,
+							"name": "isLoading",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "projects/mx-lib/src/lib/mx-grid/mx-grid.component.ts",
+									"line": 55,
+									"character": 11
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							},
+							"defaultValue": "false"
+						},
+						{
+							"id": 14,
+							"name": "rowHeight",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Height of each row in the grid.",
+								"tags": [
+									{
+										"tag": "remark",
+										"text": "Default value is 22 pixels."
+									},
+									{
+										"tag": "default",
+										"text": "22\n"
+									}
+								]
+							},
+							"decorators": [
+								{
+									"name": "Input",
+									"type": {
+										"type": "reference",
+										"name": "Input"
+									},
+									"arguments": {}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "projects/mx-lib/src/lib/mx-grid/mx-grid.component.ts",
+									"line": 52,
+									"character": 20
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							},
+							"defaultValue": "22"
+						},
+						{
+							"id": 20,
+							"name": "ngAfterViewInit",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 21,
+									"name": "ngAfterViewInit",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "projects/mx-lib/src/lib/mx-grid/mx-grid.component.ts",
+									"line": 62,
+									"character": 17
+								}
+							]
+						},
+						{
+							"id": 18,
+							"name": "ngOnInit",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 19,
+									"name": "ngOnInit",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "projects/mx-lib/src/lib/mx-grid/mx-grid.component.ts",
+									"line": 60,
+									"character": 10
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"kind": 512,
+							"children": [
+								16
+							]
+						},
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								13,
+								12,
+								15,
+								14
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								20,
+								18
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "projects/mx-lib/src/lib/mx-grid/mx-grid.component.ts",
+							"line": 22,
+							"character": 28
+						}
+					],
+					"implementedTypes": [
+						{
+							"type": "reference",
+							"name": "AfterViewInit"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"kind": 128,
+					"children": [
+						9
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "projects/mx-lib/src/lib/mx-grid/mx-grid.component.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 24,
+			"name": "\"projects/mx-lib/src/lib/mx-grid/mx-grid.module\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/yuliiadubinina/Desktop/work/mx-lib/projects/mx-lib/src/lib/mx-grid/mx-grid.module.ts",
+			"children": [
+				{
+					"id": 25,
+					"name": "MxGridModule",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {
+						"isExported": true
+					},
+					"comment": {
+						"shortText": "Represents a grid component that leverages virtual scrolling.\nThis component provides a performant way to display large sets of data in a tabular format.",
+						"tags": [
+							{
+								"tag": "en",
+								"text": "{\"summary\": \"Component to display a table\"}"
+							},
+							{
+								"tag": "usage",
+								"text": "<mx-grid\n  [data]=\"data\"\n  [columns]=\"columns\">\n</mx-grid>"
+							},
+							{
+								"tag": "reference",
+								"text": "import {MxGridModule} from '@mx/core';"
+							},
+							{
+								"tag": "end",
+								"text": "\n\n"
+							}
+						]
+					},
+					"decorators": [
+						{
+							"name": "NgModule",
+							"type": {
+								"type": "reference",
+								"name": "NgModule"
+							},
+							"arguments": {
+								"obj": "{\n  declarations: [\n    MxGridComponent\n  ],\n  imports: [\n    CommonModule,\n    ScrollingModule,\n  ],\n  exports: [\n    MxGridComponent\n  ]\n}"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "projects/mx-lib/src/lib/mx-grid/mx-grid.module.ts",
+							"line": 31,
+							"character": 25
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"kind": 128,
+					"children": [
+						25
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "projects/mx-lib/src/lib/mx-grid/mx-grid.module.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 26,
+			"name": "\"projects/mx-lib/src/public-api\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/yuliiadubinina/Desktop/work/mx-lib/projects/mx-lib/src/public-api.ts",
+			"children": [
+				{
+					"id": 29,
+					"name": "MXGridColumn",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 2
+				},
+				{
+					"id": 27,
+					"name": "MxGridComponent",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 9
+				},
+				{
+					"id": 28,
+					"name": "MxGridModule",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 25
+				}
+			],
+			"groups": [
+				{
+					"title": "References",
+					"kind": 16777216,
+					"children": [
+						29,
+						27,
+						28
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "projects/mx-lib/src/public-api.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 30,
+			"name": "\"projects/mx-lib/src/test\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/yuliiadubinina/Desktop/work/mx-lib/projects/mx-lib/src/test.ts",
+			"children": [
+				{
+					"id": 44,
+					"name": "context",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "projects/mx-lib/src/test.ts",
+							"line": 25,
+							"character": 13
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 45,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"signatures": [
+								{
+									"id": 46,
+									"name": "__call",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"typeParameter": [
+										{
+											"id": 47,
+											"name": "T",
+											"kind": 131072,
+											"kindString": "Type parameter",
+											"flags": {}
+										}
+									],
+									"parameters": [
+										{
+											"id": 48,
+											"name": "id",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "typeParameter",
+										"name": "T"
+									}
+								}
+							],
+							"children": [
+								{
+									"id": 49,
+									"name": "keys",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 50,
+											"name": "keys",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "string"
+												}
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "projects/mx-lib/src/test.ts",
+											"line": 14,
+											"character": 8
+										}
+									]
+								}
+							],
+							"groups": [
+								{
+									"title": "Functions",
+									"kind": 64,
+									"children": [
+										49
+									]
+								}
+							]
+						}
+					},
+					"defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+				},
+				{
+					"id": 31,
+					"name": "require",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "projects/mx-lib/src/test.ts",
+							"line": 11,
+							"character": 21
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 32,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 33,
+									"name": "context",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 34,
+											"name": "context",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 35,
+													"name": "path",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												},
+												{
+													"id": 36,
+													"name": "deep",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "union",
+														"types": [
+															{
+																"type": "intrinsic",
+																"name": "undefined"
+															},
+															{
+																"type": "intrinsic",
+																"name": "false"
+															},
+															{
+																"type": "intrinsic",
+																"name": "true"
+															}
+														]
+													}
+												},
+												{
+													"id": 37,
+													"name": "filter",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "reference",
+														"name": "RegExp"
+													}
+												}
+											],
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 38,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {},
+													"signatures": [
+														{
+															"id": 39,
+															"name": "__call",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {},
+															"typeParameter": [
+																{
+																	"id": 40,
+																	"name": "T",
+																	"kind": 131072,
+																	"kindString": "Type parameter",
+																	"flags": {}
+																}
+															],
+															"parameters": [
+																{
+																	"id": 41,
+																	"name": "id",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {},
+																	"type": {
+																		"type": "intrinsic",
+																		"name": "string"
+																	}
+																}
+															],
+															"type": {
+																"type": "typeParameter",
+																"name": "T"
+															}
+														}
+													],
+													"children": [
+														{
+															"id": 42,
+															"name": "keys",
+															"kind": 64,
+															"kindString": "Function",
+															"flags": {},
+															"signatures": [
+																{
+																	"id": 43,
+																	"name": "keys",
+																	"kind": 4096,
+																	"kindString": "Call signature",
+																	"flags": {},
+																	"type": {
+																		"type": "array",
+																		"elementType": {
+																			"type": "intrinsic",
+																			"name": "string"
+																		}
+																	}
+																}
+															],
+															"sources": [
+																{
+																	"fileName": "projects/mx-lib/src/test.ts",
+																	"line": 14,
+																	"character": 8
+																}
+															]
+														}
+													],
+													"groups": [
+														{
+															"title": "Functions",
+															"kind": 64,
+															"children": [
+																42
+															]
+														}
+													],
+													"sources": [
+														{
+															"fileName": "projects/mx-lib/src/test.ts",
+															"line": 12,
+															"character": 57
+														}
+													]
+												}
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "projects/mx-lib/src/test.ts",
+											"line": 12,
+											"character": 9
+										}
+									]
+								}
+							],
+							"groups": [
+								{
+									"title": "Functions",
+									"kind": 64,
+									"children": [
+										33
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "projects/mx-lib/src/test.ts",
+									"line": 11,
+									"character": 22
+								}
+							]
+						}
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						44,
+						31
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "projects/mx-lib/src/test.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"kind": 1,
+			"children": [
+				1,
+				8,
+				24,
+				26,
+				30
+			]
+		}
+	]
+}

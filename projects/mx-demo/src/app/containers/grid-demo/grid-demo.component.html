@@ -1,0 +1,23 @@
+<div class="demo-container">
+
+  <div class="demo-doc">
+    <mat-tab-group [selectedIndex]="tabSelectedIndex" (selectedIndexChange)="onSelectedTabIndexChange($event)">
+
+      <mat-tab label="API">
+        <app-api-doc #apiDoc [model]="model" fxLayout="column"></app-api-doc>
+      </mat-tab>
+
+      <mat-tab label="Example Params">
+        <div>
+          <br>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  <div class="component-example">
+    <div class="mat-h1">Component Example:</div>
+    <mx-grid [data]="data" [columns]="columns"></mx-grid>
+  </div>
+
+</div>

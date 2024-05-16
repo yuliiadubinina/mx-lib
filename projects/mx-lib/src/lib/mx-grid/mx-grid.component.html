@@ -1,0 +1,25 @@
+<table class="mx-table-header" #header>
+    <thead>
+        <tr [style.height.px]="rowHeight">
+            <th scope="col" *ngFor="let column of columns" class="mx-column-cell" [style.width.px]="column.width"
+                [style.maxWidth.px]="column.width" [style.minWidth.px]="column.width">
+                {{column.name || column.field}}
+            </th>
+
+            <th class="empty-cell" [style.minHeight.px]="rowHeight"></th>
+        </tr>
+    </thead>
+</table>
+
+<table class="mx-table">
+    <cdk-virtual-scroll-viewport #viewport [itemSize]="rowHeight" class="mx-table-viewport">
+        <tbody class="mx-table-body">
+            <tr *cdkVirtualFor="let item of data" class="mx-row" [style.height.px]="rowHeight">
+                <td *ngFor="let column of columns" class="mx-cell" [style.width.px]="column.width"
+                    [style.maxWidth.px]="column.width" [style.minWidth.px]="column.width" [title]="item[column.field]">
+                    {{item[column.field]}}
+                </td>
+            </tr>
+        </tbody>
+    </cdk-virtual-scroll-viewport>
+</table>

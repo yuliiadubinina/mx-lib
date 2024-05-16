@@ -1,0 +1,22 @@
+@import 'assets/styles/mx-var.scss';
+@import 'assets/styles/mx-theme.scss';
+@import 'assets/styles/mx-layout.scss';
+@import 'assets/styles/mx-form-field.scss';
+@import 'assets/styles/mx-checkbox-radio.scss';
+@import 'assets/styles/mx-tabs.scss';
+@import 'assets/styles/mx-dialog.scss';
+@import 'assets/styles/mx-button.scss';
+@import 'assets/styles/mx-tree.scss';
+@import 'assets/styles/mx-spacing.scss';
+@import 'assets/styles/prism-ghcolors.css';
+
+body {
+  font-weight: 400;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+}

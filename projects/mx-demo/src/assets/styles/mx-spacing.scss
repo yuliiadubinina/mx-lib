@@ -1,0 +1,43 @@
+.mx {
+  // Define sizes
+  $sizes: 0, 5, 8, 10, 15, 16, 20, 22, 24, 25, 30, 40, 50, 70, 80, 90;
+
+  // Mixins for margin and padding
+  @mixin margin($side, $size) {
+    @if $side=='top' { margin-top: $size; }
+    @else if $side=='bottom' { margin-bottom: $size; }
+    @else if $side=='left' { margin-left: $size; }
+    @else if $side=='right' { margin-right: $size; }
+  }
+
+  @mixin padding($side, $size) {
+    @if $side=='top' { padding-top: $size; }
+    @else if $side=='bottom' { padding-bottom: $size; }
+    @else if $side=='left' { padding-left: $size; }
+    @else if $side=='right' { padding-right: $size; }
+  }
+
+  // Mixin for gap
+  @mixin gap($size) { gap: $size; }
+
+  // Generate classes for margin
+  @each $size in $sizes {
+    .mr-#{$size} { @include margin(right, #{$size}px); }
+    .mt-#{$size} { @include margin(top, #{$size}px); }
+    .mb-#{$size} { @include margin(bottom, #{$size}px); }
+    .ml-#{$size} { @include margin(left, #{$size}px); }
+  }
+
+  // Generate classes for padding
+  @each $size in $sizes {
+    .pr-#{$size} { @include padding(right, #{$size}px); }
+    .pt-#{$size} { @include padding(top, #{$size}px); }
+    .pb-#{$size} { @include padding(bottom, #{$size}px); }
+    .pl-#{$size} { @include padding(left, #{$size}px); }
+  }
+
+  // Generate classes for gap
+  @each $size in $sizes {
+    .gap-#{$size} { @include gap(#{$size}px); }
+  }
+}

@@ -1,0 +1,406 @@
+{
+	"id": 0,
+	"name": "mx-lib",
+	"kind": 1,
+	"kindString": "Project",
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 1,
+			"name": "MxGridComponent",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"comment": {
+				"shortText": "Represents a grid component that leverages virtual scrolling.\nThis component provides a performant way to display large sets of data in a tabular format.",
+				"tags": [
+					{
+						"tag": "remark",
+						"text": "This component is intended to be used where performance in rendering large lists is critical."
+					},
+					{
+						"tag": "selector",
+						"text": "`mx-grid`"
+					},
+					{
+						"tag": "stylesurl",
+						"text": "'./mx-grid.component.scss'"
+					},
+					{
+						"tag": "templateurl",
+						"text": "'./mx-grid.component.html'"
+					},
+					{
+						"tag": "changedetectionstrategy",
+						"text": "ChangeDetectionStrategy.OnPush - optimizes the change detection to improve performance\n"
+					}
+				]
+			},
+			"decorators": [
+				{
+					"name": "UntilDestroy",
+					"type": {
+						"type": "reference",
+						"qualifiedName": "UntilDestroy",
+						"package": "@ngneat/until-destroy",
+						"name": "UntilDestroy"
+					},
+					"arguments": {}
+				},
+				{
+					"name": "Component",
+					"type": {
+						"type": "reference",
+						"qualifiedName": "ComponentDecorator",
+						"package": "@angular/core",
+						"name": "Component"
+					},
+					"arguments": {
+						"obj": "{\n  selector: 'mx-grid',\n  templateUrl: './mx-grid.component.html',\n  styleUrls: ['./mx-grid.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush\n}"
+					}
+				}
+			],
+			"children": [
+				{
+					"id": 2,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "lib/mx-grid/mx-grid.component.ts",
+							"line": 54,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 3,
+							"name": "new MxGridComponent",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"id": 1,
+								"name": "MxGridComponent"
+							}
+						}
+					]
+				},
+				{
+					"id": 7,
+					"name": "columns",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"comment": {
+						"shortText": "Configuration for columns of the grid, including width and the data field to be displayed.",
+						"tags": [
+							{
+								"tag": "remark",
+								"text": "Update the `columns` array to change the structure and formatting of the grid columns.\n"
+							}
+						]
+					},
+					"decorators": [
+						{
+							"name": "Input",
+							"type": {
+								"type": "reference",
+								"qualifiedName": "InputDecorator",
+								"package": "@angular/core",
+								"name": "Input"
+							},
+							"arguments": {}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/mx-grid/mx-grid.component.ts",
+							"line": 45,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "reference",
+							"name": "MXGridColumn"
+						}
+					},
+					"defaultValue": "[]"
+				},
+				{
+					"id": 6,
+					"name": "data",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"comment": {
+						"shortText": "The dataset to be rendered in the grid.",
+						"tags": [
+							{
+								"tag": "remark",
+								"text": "Assumes that each item in the array corresponds to one row in the grid.\n"
+							}
+						]
+					},
+					"decorators": [
+						{
+							"name": "Input",
+							"type": {
+								"type": "reference",
+								"qualifiedName": "InputDecorator",
+								"package": "@angular/core",
+								"name": "Input"
+							},
+							"arguments": {}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/mx-grid/mx-grid.component.ts",
+							"line": 39,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "any"
+						}
+					},
+					"defaultValue": "[]"
+				},
+				{
+					"id": 8,
+					"name": "rowHeight",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"comment": {
+						"shortText": "Height of each row in the grid.",
+						"tags": [
+							{
+								"tag": "remark",
+								"text": "Default value is 22 pixels."
+							},
+							{
+								"tag": "default",
+								"text": "22\n"
+							}
+						]
+					},
+					"decorators": [
+						{
+							"name": "Input",
+							"type": {
+								"type": "reference",
+								"qualifiedName": "InputDecorator",
+								"package": "@angular/core",
+								"name": "Input"
+							},
+							"arguments": {}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "lib/mx-grid/mx-grid.component.ts",
+							"line": 52,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					},
+					"defaultValue": "22"
+				},
+				{
+					"id": 11,
+					"name": "ngAfterViewInit",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "lib/mx-grid/mx-grid.component.ts",
+							"line": 59,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 12,
+							"name": "ngAfterViewInit",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "AfterViewInit.ngAfterViewInit"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "AfterViewInit.ngAfterViewInit"
+					}
+				},
+				{
+					"id": 9,
+					"name": "ngOnInit",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "lib/mx-grid/mx-grid.component.ts",
+							"line": 57,
+							"character": 2
+						}
+					],
+					"signatures": [
+						{
+							"id": 10,
+							"name": "ngOnInit",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						2
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						7,
+						6,
+						8
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						11,
+						9
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "lib/mx-grid/mx-grid.component.ts",
+					"line": 23,
+					"character": 13
+				}
+			],
+			"implementedTypes": [
+				{
+					"type": "reference",
+					"qualifiedName": "AfterViewInit",
+					"package": "@angular/core",
+					"name": "AfterViewInit"
+				}
+			]
+		},
+		{
+			"id": 15,
+			"name": "MxGridModule",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"decorators": [
+				{
+					"name": "NgModule",
+					"type": {
+						"type": "reference",
+						"qualifiedName": "NgModuleDecorator",
+						"package": "@angular/core",
+						"name": "NgModule"
+					},
+					"arguments": {
+						"obj": "{\n  declarations: [\n    MxGridComponent\n  ],\n  imports: [\n    CommonModule,\n    ScrollingModule,\n  ],\n  exports: [\n    MxGridComponent\n  ]\n}"
+					}
+				}
+			],
+			"children": [
+				{
+					"id": 16,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 17,
+							"name": "new MxGridModule",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"id": 15,
+								"name": "MxGridModule"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						16
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "lib/mx-grid/mx-grid.module.ts",
+					"line": 20,
+					"character": 13
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Classes",
+			"kind": 128,
+			"children": [
+				1,
+				15
+			]
+		}
+	],
+	"sources": [
+		{
+			"fileName": "public-api.ts",
+			"line": 1,
+			"character": 0
+		}
+	]
+}

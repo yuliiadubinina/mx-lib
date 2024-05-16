@@ -1,0 +1,83 @@
+.mx {
+
+  .notice-rule-pane {
+    transform: translate(0);
+  }
+
+  .mat-dialog-container {
+    border-radius: 4px;
+    padding: 0;
+    overflow: visible;
+    color: var(--mx-color-text);
+    height: inherit;
+  }
+
+  .mat-card-title {
+    color: var(--mx-color-text);
+  }
+
+  .mat-dialog-title {
+    font-weight: 500;
+  }
+
+  .mat-dialog-actions {
+    padding: 0;
+    min-height: 44px;
+    gap: 0 12px;
+
+    .mat-button-base+.mat-button-base,
+    .mat-mdc-button-base+.mat-mdc-button-base {
+      margin-left: 0;
+    }
+  }
+
+  .popup-header {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .popup-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0 12px;
+
+    &.flex-start {
+      justify-content: start;
+    }
+  }
+
+  .mat-dialog-90 {
+    height: 90%;
+    min-height: 400px;
+    max-height: 810px;
+  }
+}
+
+.mx {
+  .mat-datepicker-popup {
+    margin-top: 1px;
+
+    .mat-calendar-header {
+      padding: 0 8px;
+    }
+
+    .mat-calendar-controls {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      height: 48px;
+
+    }
+
+    // .mat-calendar-body-label {
+    //   visibility: hidden;
+    // }
+
+    .mat-datepicker-content .mat-calendar {
+      height: auto;
+    }
+
+  }
+
+}

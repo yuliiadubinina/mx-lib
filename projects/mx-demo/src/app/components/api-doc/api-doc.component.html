@@ -1,0 +1,84 @@
+<div>
+    <div *ngIf="model.description && model.description.length > 0" class="module-header">
+      <span class="doc-subheader mat-h2">{{model.description}}</span>
+    </div>
+  
+    <div *ngIf="model.usageCode && model.usageCode.length > 0">
+      <span class="doc-subheader mat-h3">Usage</span>
+      <pre class="{{preElevation}}"><code class="language-html">{{model.usageCode}}</code></pre>
+      <pre *ngIf="model.usageCodeJS" class="{{preElevation}}"><code class="language-javascript">{{model.usageCodeJS}}</code></pre>
+    </div>
+  
+    <div *ngIf="model.referenceCode && model.referenceCode.length > 0" style="margin-top:16px">
+      <span class="doc-subheader mat-h3">ApiReference</span>
+      <pre class="{{preElevation}}"><code class="language-javascript">{{model.referenceCode}}</code></pre>
+    </div>
+  
+    <div *ngFor="let block of model.blocks; let idx=index">
+      <div *ngIf="block.blockType == 'services'     && blockType(idx-1) != 'service'" class="block-header">Services</div>
+      <div *ngIf="block.blockType == 'directives'   && blockType(idx-1) != 'directives'" class="block-header">Directives/Components</div>
+      <div *ngIf="block.blockType == 'classes'      && blockType(idx-1) != 'classes'" class="block-header">Classes</div>
+      <div *ngIf="block.blockType == 'interfaces'   && blockType(idx-1) != 'interfaces'" class="block-header">Interfaces</div>
+      <div *ngIf="block.blockType == 'functions'    && blockType(idx-1) != 'functions'" class="block-header">Functions</div>
+      <div *ngIf="block.blockType == 'type_aliases' && blockType(idx-1) != 'type_aliases'" class="block-header">Type aliases</div>
+      <div *ngIf="block.blockType == 'constants'    && blockType(idx-1) != 'constants'" class="block-header">Constants</div>
+  
+      <div *ngFor="let item of block.details">
+  
+  
+        <div *ngIf="item.name && item.name.length > 0" class="block-item-name">{{item.name}}</div>
+        <div *ngIf="item.description && item.description.length > 0" class="block-item-description">{{item.description}}</div>
+  
+        <div *ngIf="item.selector && item.selector.length > 0" class="bg-white mt-0"><span class="text-muted">Selector:</span>&nbsp;<span
+            class="mat-h3">{{item.selector}}</span></div>
+        <div *ngIf="item.exportAs && item.exportAs.length > 0" class="bg-white"><span class="text-muted">Exported as:</span>&nbsp;<span
+            class="mat-h3">{{item.exportAs}}</span></div>
+  
+        <div *ngIf="item.properties && item.properties.length > 0" class="mt-0">
+          <div class="doc-subheader-2 mat-h4">Properties:</div>
+          <table class="property-table {{preElevation}}" fxFlex style="width: 100%;">
+            <tbody>
+              <tr>
+                <th class="name-column">PropertyName</th>
+                <th class="description-column">PropertyDescription</th>
+              </tr>
+              <tr *ngFor="let property of item.properties">
+                <td><code class="language-javascript" style="white-space: pre-wrap;">{{property.name}}</code></td>
+                <td><div class="field-description">{{property.description}}</div><div *ngIf="property.remark != null" class="field-description text-muted"><i>{{property.remark}}</i></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+        <div *ngIf="item.methods && item.methods.length > 0" class="mt-0">
+          <div class="doc-subheader-2 mat-h4">Methods:</div>
+          <table class="property-table {{preElevation}}" fxFlex style="width: 100%;">
+            <tbody>
+              <tr>
+                <th class="name-column">PropertyName</th>
+                <th class="description-column">PropertyDescription</th>
+              </tr>
+              <tr *ngFor="let method of item.methods">
+                <td><code class="language-javascript" style="white-space: pre-wrap;">{{method.name}}</code></td>
+                <td><div>{{method.description}}</div><div *ngIf="method.remark != null" class="text-muted"><i>{{method.remark}}</i></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+        <div *ngIf="item.styles && item.styles.length > 0" class="mt-3">
+          <div class="doc-subheader-2 mat-h4">Styles:</div>
+          <div *ngFor="let style of item.styles">{{style}}</div>
+        </div>
+  
+        <div *ngIf="item.codeBlock && item.codeBlock.length > 0" class="mt-3">
+          <pre class="{{preElevation}}"><code class="language-javascript">{{item.codeBlock}}</code></pre>
+        </div>
+      </div>
+  
+      <div>&nbsp;</div>
+  
+    </div>
+  
+  </div>
+  

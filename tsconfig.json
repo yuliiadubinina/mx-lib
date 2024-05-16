@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -11,22 +10,45 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "paths": {
+      "mx-lib": [
+        "dist/mx-lib/mx-lib",
+        "dist/mx-lib"
+      ],
+      "@angular/*": ["./node_modules/@angular/*"],
+      "@angular/material": ["./node_modules/@angular/material"],
+      "projects/*": ["projects/*"]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
+    "typeRoots": ["node_modules/@types"],
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "types": ["node"],
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true
   },
+  
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
+  },
+  "include": ["projects/mx-lib/src/**/*", "projects/mx-demo/src/**/*"],
+  "exclude": ["node_modules", "dist"],
+  "typedocOptions": {
+    "mode": "modules",
+    "json": "./docs/doc-api.json",
+    "exclude": "**/*+(e2e|spec|index).ts",
+    "excludePrivate": true
   }
 }

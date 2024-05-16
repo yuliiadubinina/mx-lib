@@ -1,0 +1,43 @@
+.app-toolbar {
+  display: flex;
+
+  button:not(:first-child) {
+    padding: 18px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .menu-button {
+    .material-icons {
+      font-size: 25px;
+      line-height: 25px;
+    }
+  }
+
+  .github-button {
+    position: absolute;
+    right: 20px;
+  }
+
+  .github-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+}
+
+.sidenav-list-item {
+  min-width: 200px;
+}
+
+.sidenav-content {
+  height: 100%;
+}
+
+.mat-drawer {
+  width: 200px;
+  &-container {
+    height: calc(100% - 64px);
+  }
+}

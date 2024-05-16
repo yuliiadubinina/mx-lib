@@ -1,0 +1,68 @@
+:host {
+  --cell-border: 1px solid #d2d1d2;
+  --header-bg-color: #f0f0f0;
+
+  display: block;
+  height: 100%;
+  font: 400 12px/20px Roboto;
+  position: relative;
+}
+
+.mx-table-header,
+.mx-table {
+  width: 100%;
+  border-right: var(--cell-border);
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.mx-table-header {
+  border-bottom: none;
+  background-color: var(--header-bg-color);
+  overflow-x: hidden;
+  display: block;
+}
+
+.mx-table {
+  height: calc(100% - 24px);
+}
+
+.mx-table-viewport {
+  height: 100%;
+}
+
+.mx-row {
+  background-color: #fff;
+}
+
+.mx-column-cell,
+.mx-cell {
+  white-space: nowrap;
+
+  border: var(--cell-border);
+  text-align: left;
+  padding: 0 5px;
+  height: 22px;
+}
+
+.mx-cell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.empty-cell {
+  border-bottom: var(--cell-border);
+  border-top: var(--cell-border);
+}
+
+td:last-child,
+th:nth-last-child(-n + 2) {
+  width: 100% !important;
+  min-width: 50px !important;
+  max-width: 50px !important;
+  border-right: none;
+}
+
+tr:first-child td {
+  border-top: none;
+}

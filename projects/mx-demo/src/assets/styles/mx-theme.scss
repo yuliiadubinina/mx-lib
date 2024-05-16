@@ -1,0 +1,132 @@
+@use '@angular/material' as mat;
+@import "@angular/material/theming";
+
+$fontConfig: (
+  display-4: mat.define-typography-level(112px, 112px, 300, "Roboto", -0.0134em),
+  display-3: mat.define-typography-level(56px, 56px, 400, "Roboto", -0.0089em),
+  display-2: mat.define-typography-level(45px, 48px, 400, "Roboto", 0em),
+  display-1: mat.define-typography-level(34px, 40px, 400, "Roboto", 0.0074em),
+  headline: mat.define-typography-level(24px, 32px, 400, "Roboto", 0em),
+  title: mat.define-typography-level(20px, 32px, 500, "Roboto", 0.0075em),
+  subheading-2: mat.define-typography-level(16px, 28px, 400, "Roboto", 0.0094em),
+  subheading-1: mat.define-typography-level(15px, 24px, 500, "Roboto", 0.0067em),
+  body-2: mat.define-typography-level(12px, 24px, 400, "Roboto", 0.0179em),
+  body-1: mat.define-typography-level(12px, 20px, 400, "Roboto", 0.0179em),
+  button: mat.define-typography-level(12px, 1, 400, "Roboto", 0.0893em),
+  caption: mat.define-typography-level(12px, 20px, 400, "Roboto", 0.0333em),
+  input: mat.define-typography-level(12px, 1, 400, "Roboto", .38px),
+);
+
+@include mat.core($fontConfig);
+
+// Theme Config
+
+$light-primary-text: #fff;
+$dark-primary-text: #4A494A;
+
+
+$mat-primary: (
+  main: #00A82D,
+  lighter: #bee7cf,
+  darker: #179444,
+  200: #00A82D,
+  // For slide toggle,
+  contrast: (main: $light-primary-text,
+    lighter: $dark-primary-text,
+    darker: $light-primary-text,
+  ),
+);
+$theme-primary: mat.define-palette($mat-primary, main, lighter, darker);
+
+
+$mat-accent: (
+  main: #2981d3,
+  lighter: #bfd9f2,
+  darker: #1964c2,
+  200: #2981d3,
+  // For slide toggle,
+  contrast: (main: $light-primary-text,
+    lighter: $dark-primary-text,
+    darker: $light-primary-text,
+  ),
+);
+$theme-accent: mat.define-palette($mat-accent, main, lighter, darker);
+
+$mat-warn: (
+  main: #e74c3c,
+  lighter: #ffcdc9,
+  darker: #ff3c33,
+  200: #e74c3c,
+  // For slide toggle,
+  contrast: (main: $dark-primary-text,
+    lighter: $dark-primary-text,
+    darker: $light-primary-text,
+  ),
+);
+$theme-warn: mat.define-palette($mat-warn, main, lighter, darker);
+
+$theme: mat.define-light-theme($theme-primary, $theme-accent, $theme-warn);
+$altTheme: mat.define-dark-theme($theme-primary, $theme-accent, $theme-warn);
+
+// Theme Init
+@include mat.all-component-themes($theme);
+
+.theme-alternate {
+  @include mat.all-component-themes($altTheme);
+}
+
+@media print {
+  app-root {
+    display: none !important;
+  }
+
+  .cdk-global-overlay-wrapper {
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+  }
+
+  .mat-dialog-container {
+    box-shadow: none !important;
+  }
+
+  .cdk-overlay-pane {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  mat-dialog-container {
+    app-settings-form-backup-codes {
+      width: 100% !important;
+      padding-left: 0 !important;
+
+      .mat-form-field-outline {
+        visibility: hidden !important;
+      }
+
+      .mat-form-field-flex {
+        padding: 0 !important;
+      }
+
+      .attent,
+      .mat-dialog-actions {
+        display: none !important;
+      }
+    }
+  }
+
+
+}
+
+body {
+  .material-icons {
+    // opacity: 0;
+    visibility: hidden;
+  }
+
+  &.mx {
+    .material-icons {
+      visibility: visible;
+    }
+  }
+}
